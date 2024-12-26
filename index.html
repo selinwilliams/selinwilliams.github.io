@@ -1,1 +1,163 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selin Williams | Software Engineer</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scripts.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <nav>
+            <div class="menu-logo">
+                <span class="logo">&lt;SW/&gt;</span>
+            </div>
+            <div class="menu-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <img src="images/8a62a259-5c3b-4f32-adb9-2db946d5c6fd.png" alt="Selin Williams" class="profile-picture">
+                <h1>Selin Williams</h1>
+                <h2 class="typewriter">Software Engineer</h2>
+                <p class="hero-text">Building elegant solutions to complex problems</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="cta-primary">View Projects</a>
+                    <a href="#contact" class="cta-secondary">Contact Me</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="container">
+            <h2>Technologies & Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skills-list">
+                        <span class="skill">JavaScript</span>
+                        <span class="skill">React.js</span>
+                        <span class="skill">React Native</span>
+                        <span class="skill">Redux</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="skills-list">
+                        <span class="skill">Node.js</span>
+                        <span class="skill">Express.js</span>
+                        <span class="skill">Python</span>
+                        <span class="skill">GraphQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Database</h3>
+                    <div class="skills-list">
+                        <span class="skill">PostgreSQL</span>
+                        <span class="skill">SQLite3</span>
+                        <span class="skill">SQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools</h3>
+                    <div class="skills-list">
+                        <span class="skill">Git & GitHub</span>
+                        <span class="skill">Docker</span>
+                        <span class="skill">TDD (Mocha)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>I'm a dedicated software engineer with a background in customer service and cultural adaptability, transitioning from a career as an au pair to software engineering. My journey has equipped me with unique perspectives on problem-solving and user experience.</p>
+                <p>I specialize in building scalable web applications using modern technologies and best practices. My approach combines technical excellence with user-centered design principles.</p>
+            </div>
+        </section>
+        
+        <section id="projects" class="container">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/trail-home.jpg" alt="Trail Home Project">
+                    </div>
+                    <div class="project-content">
+                        <h3>Trail Home</h3>
+                        <p>A sustainable e-commerce platform focused on eco-friendly products. Features include user authentication, product filtering, and shopping cart functionality.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://github.com/selinwilliams/Trail-Home" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/task-flow.jpg" alt="Task Flow Project">
+                    </div>
+                    <div class="project-content">
+                        <h3>Task Flow</h3>
+                        <p>A comprehensive project management tool with real-time updates, task tracking, and team collaboration features.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Redux</span>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="#" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="container">
+            <h2>Let's Connect</h2>
+            <div class="contact-content">
+                <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
+                <div class="contact-links">
+                    <a href="mailto:uzunogluselin92@gmail.com" class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>uzunogluselin92@gmail.com</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/selin-williams/" target="_blank" class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/selinwilliams" target="_blank" class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Selin Williams. All rights reserved.</p>
+    </footer>
+</body>
+</html>
