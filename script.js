@@ -102,3 +102,61 @@ document.querySelectorAll('section, .project-card').forEach(element => {
 window.addEventListener('load', () => {
     displayProjects();
 });
+
+// Initialize EmailJS
+(function() {
+    // Replace 'YOUR_PUBLIC_KEY' with your actual EmailJS public key
+    emailjs.init("YOUR_PUBLIC_KEY");
+})();
+
+// Contact form handling
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    // Get the submit button and add loading state
+    const submitBtn = this.querySelector('.submit-btn');
+    const originalBtnText = submitBtn.textContent;
+    submitBtn.textContent = 'Sending...';
+    submitBtn.classList.add('loading');
+    
+    // Remove any existing message
+    const existingMessage = document.querySelector('.form-message');
+    if (existingMessage) {
+        existingMessage.remove();
+    }
+    
+    // Get form data
+    const formData = {
+        name: this.querySelector('#name').value,
+        email: this.querySelector('#email').value,
+        subject: this.querySelector('#subject').value,
+        message: this.querySelector('#message').value
+    };
+    
+    // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual EmailJS service and template IDs
+    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData)
+        .then(() => {
+            // Create success message
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'form-message success';
+            messageDiv.textContent = 'Message sent successfully!';
+            this.appendChild(messageDiv);
+            
+            // Reset form
+            this.reset();
+        })
+        .catch((error) => {
+            // Create error message
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'form-message error';
+            messageDiv.textContent = 'Failed to send message. Please try again.';
+            this.appendChild(messageDiv);
+            
+            console.error('EmailJS error:', error);
+        })
+        .finally(() => {
+            // Reset button state
+            submitBtn.textContent = originalBtnText;
+            submitBtn.classList.remove('loading');
+        });
+});

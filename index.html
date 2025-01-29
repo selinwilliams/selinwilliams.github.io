@@ -243,30 +243,24 @@
             <p>Houston, TX, USA</p>
           </div>
           <div class="social-links">
-            <a href="https://github.com/selinwilliams" target="_blank"
-              ><i class="fab fa-github"></i
-            ></a>
-            <a
-              href="https://www.linkedin.com/in/selin-williams/"
-              target="_blank"
-              ><i class="fab fa-linkedin"></i
-            ></a>
-            <a href="selin.williams.tx@gmail.com"
-              ><i class="fas fa-envelope"></i
-            ></a>
+            <a href="https://github.com/selinwilliams" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/selin-williams/" target="_blank"><i class="fab fa-linkedin"></i></a>
           </div>
         </div>
-        <form class="contact-form">
+        <form id="contact-form" class="contact-form">
           <div class="form-group">
-            <input type="text" placeholder="Your Name" required />
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
           </div>
           <div class="form-group">
-            <input type="email" placeholder="Your Email" required />
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
           </div>
           <div class="form-group">
-            <textarea placeholder="Your Message" required></textarea>
+            <input type="text" id="subject" name="subject" placeholder="Subject" required>
           </div>
-          <button type="submit" class="cta-button">Send Message</button>
+          <div class="form-group">
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Message</button>
         </form>
       </div>
     </section>
@@ -287,6 +281,7 @@
       </div>
     </footer>
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
